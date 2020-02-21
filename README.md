@@ -23,6 +23,9 @@ or manually clone the repo and then run `npm install`.
 
 Run the following command to run startup migrations.
 
+###
+Database made with Postgres
+
 ```js
 adonis migration:run
 ```
