@@ -11,16 +11,13 @@
 */
 
 /** @type {import('@adonisjs/lucid/src/Factory')} */
-const Factory = use('Factory');
 
-const Hash = use('Hash');
+const Database = use('Database');
 
-Factory.blueprint('App/Models/User', async (faker) => {
-  return {
-    username: faker.username(),
-    email: faker.email(),
-    password: await Hash.make(faker.password()),
-  };
-});
-
+class UserSeeder {
+  async run() {
+    const users = await Database.table('users');
+    console.log(users);
+  }
+}
 module.exports = UserSeeder;
