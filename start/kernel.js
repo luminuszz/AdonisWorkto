@@ -3,6 +3,7 @@
 /** @type {import('@adonisjs/framework/src/Server')} */
 const Server = use('Server');
 
+
 /*
 |--------------------------------------------------------------------------
 | Global Middleware
@@ -16,6 +17,7 @@ const globalMiddleware = [
   'Adonis/Middleware/BodyParser',
   'App/Middleware/AplicationGlobal',
   'App/Middleware/ConvertEmptyStringsToNull',
+
 ];
 
 /*
@@ -59,3 +61,4 @@ Server
     .registerGlobal(globalMiddleware)
     .registerNamed(namedMiddleware)
     .use(serverMiddleware);
+
