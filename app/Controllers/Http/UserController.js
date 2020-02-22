@@ -6,11 +6,18 @@ const User = use('App/Models/User');
 class UserController {
   // Metodo store salva os cadastros da requisição no banco
   async store({request, response}) {
-    const data = request.all();
+    try {
+      const data = request.all();
 
+      const user = await User.create(data);
+      return user;
+    } catch (error) {
+      return response.status().send({message: 'Erro no cadastro'});
+    }
+  }
 
-    const user = await User.create(data);
-    return user;
+  async getUsers() {
+    return User.all();
   }
 }
 // Exports Controller

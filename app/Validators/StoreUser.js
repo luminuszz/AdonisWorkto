@@ -1,5 +1,4 @@
 'use strict';
-
 class StoreUser {
   get validateAll() {
     return true;
@@ -7,7 +6,7 @@ class StoreUser {
 
   get rules() {
     return {
-      username: 'required|email|unique:users,username|max:80',
+      username: 'required|unique:users,username|max:80',
       email: 'required|unique:users,email|max:254',
       password: 'required|max:60',
       contact: 'required|max:11',

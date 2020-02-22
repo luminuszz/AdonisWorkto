@@ -41,6 +41,7 @@ class ForgotPasswordController {
                 .subject('Recuperação de email');
           },
       );
+      return response.send({message: 'Email enviado com sucesso'});
     } catch (error) {
       // Catch init
       return (

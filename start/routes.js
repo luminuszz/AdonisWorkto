@@ -3,13 +3,21 @@
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route');
+// Get
 
-Route.post('users', 'UserController.store');
+Route.get('getUsers', 'UserController.getUsers');
 
-Route.post('session', 'SessionController.store')
+
+// Post
+Route.post('users', 'UserController.store').validator('storeUser');
+
+Route.post('session', 'SessionController.store').validator('StoreSession')
 ;
 
-Route.post('password', 'ForgotPasswordController.store')
-;
+Route.post('password', 'ForgotPasswordController.store').validator(
+    'StoreForgortPassword',
+);
 
-Route.put('changePasswords', 'ForgotPasswordController.uptade');
+Route.put('changePasswords', 'ForgotPasswordController.uptade').validator(
+    'StoreChangePassword',
+);
