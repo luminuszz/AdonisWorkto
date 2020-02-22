@@ -9,7 +9,7 @@ Route.get('getUsers', 'UserController.getUsers');
 
 
 // Post
-Route.post('users', 'UserController.store').validator('storeUser');
+Route.post('users', 'UserController.store').validator('StoreUser');
 
 Route.post('session', 'SessionController.store').validator('StoreSession')
 ;
