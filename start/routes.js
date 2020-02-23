@@ -5,6 +5,9 @@
 const Route = use('Route');
 // Get
 
+Route.get('/', (req, res) =>{
+  return res.send({message: 'Hello'});
+});
 Route.get('getUsers', 'UserController.getUsers');
 
 
