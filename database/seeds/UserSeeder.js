@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 |--------------------------------------------------------------------------
@@ -12,11 +12,11 @@
 
 /** @type {import('@adonisjs/lucid/src/Factory')} */
 
-const Database = use('Database');
+const Database = use("Database");
 
 class UserSeeder {
   async run() {
-    const users = await Database.table('users');
+    const users = await Database.table("users");
     console.log(users);
   }
 }
