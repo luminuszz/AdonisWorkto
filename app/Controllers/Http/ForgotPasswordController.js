@@ -29,7 +29,9 @@ class ForgotPasswordController {
           // used variables to email template
           email,
           token: user.token,
-          link: `${request.input("redirect_url")}?token=${user.token}`
+          link: `${request.input(
+            "http://localhost:3000/resetpassword"
+          )}?token=${user.token}`
           // "Redirect_url" is used from create token url
           // obs: "Link" is used from create a url iclude token user
         },

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 class StoreSession {
   get validateAll() {
@@ -7,15 +7,15 @@ class StoreSession {
 
   get rules() {
     return {
-      email: 'required|max:254|string',
-      password: 'required|max:60|string',
+      email: "required|max:254|string",
+      password: "required|max:60|string"
     };
   }
 
   get messages() {
     return {
-      'email.required': 'campo vazio: email',
-      'password.required': 'campo vazio: password',
+      "email.required": "campo vazio: email",
+      "password.required": "campo vazio: password"
     };
   }
 }
