@@ -16,6 +16,6 @@ Route.post("password", "ForgotPasswordController.store").validator(
   "StoreForgortPassword"
 );
 
-Route.put("changePasswords", "ForgotPasswordController.uptade").validator(
+Route.put("changepasswords", "ForgotPasswordController.uptade").validator(
   "StoreChangePassword"
 );
