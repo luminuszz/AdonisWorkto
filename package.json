@@ -28,7 +28,7 @@
     "@adonisjs/validator": "^5.0.6",
     "@adonisjs/vow": "^1.0.17",
     "indicative": "^7.4.4",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "pg": "^7.18.1",
     "prettier": "^1.19.1"
   },
